@@ -1,3 +1,4 @@
+import 'package:auth_ui/widgets.dart/button_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,8 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Auth UI",
-      home: Placeholder(),
+      title: 'Auth UI',
+      home: MyButton(buttonText: 'Authentication',),
     );
   }
 }
