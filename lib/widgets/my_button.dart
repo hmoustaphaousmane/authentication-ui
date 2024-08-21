@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  const MyButton(
-      {super.key, required this.buttonText, this.onTap});
+  const MyButton({
+    super.key,
+    required this.buttonText,
+    required this.butthonWidth,
+    this.onTap,
+  });
 
   final String buttonText;
+  final double butthonWidth;
   final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Center(
       child: Material(
         elevation: 8.0,
@@ -16,8 +23,9 @@ class MyButton extends StatelessWidget {
         child: InkWell(
           onTap: onTap,
           child: Container(
-            height: 50,
-            width: 250,
+            height: size.height / 15,
+            // width: size.width * 0.8,
+            width: butthonWidth,
             decoration: BoxDecoration(
               color: Colors.grey[300],
               borderRadius: BorderRadius.circular(8.0),

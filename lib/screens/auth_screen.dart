@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
-import '../widgets.dart/button_widget.dart';
-import '../widgets.dart/footer_widget.dart';
+import '../widgets/my_button.dart';
+import '../widgets/footer.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -38,6 +38,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white38,
       body: SafeArea(
@@ -65,6 +66,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                   MyButton(
                     buttonText: 'Se connecter',
+                    butthonWidth: size.width * 0.75,
                     onTap: _toggleLogin,
                   ),
                   const SizedBox(
@@ -72,6 +74,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                   MyButton(
                     onTap: _toggleSignUp,
+                    butthonWidth: size.width * 0.75,
                     buttonText: 'S\'inscrire',
                   ),
                 ],
@@ -86,6 +89,7 @@ class _AuthScreenState extends State<AuthScreen> {
   }
 
   Widget _buildLoginOverlay(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -151,6 +155,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                   MyButton(
                     onTap: () {},
+                    butthonWidth: size.width * 0.75,
                     buttonText: 'Se connecter',
                   ),
                   const SizedBox(
@@ -167,6 +172,7 @@ class _AuthScreenState extends State<AuthScreen> {
   }
 
   Widget _buildSignUpOverlay(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return SafeArea(
       child: Expanded(
         flex: 9,
@@ -282,6 +288,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   const SizedBox(height: 20),
                   MyButton(
                     onTap: () {},
+                    butthonWidth: size.width * 0.75,
                     buttonText: 'S\'inscrire',
                   ),
                   const SizedBox(height: 20),

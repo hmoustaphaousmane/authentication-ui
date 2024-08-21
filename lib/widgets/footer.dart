@@ -1,11 +1,14 @@
-import 'package:auth_ui/widgets.dart/button_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/my_button.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Column(
@@ -33,14 +36,16 @@ class Footer extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 10),
-          const MyButton(
+          SizedBox(height: size.height * 0.05),
+          MyButton(
             buttonText: 'Google',
+            butthonWidth: size.width * 0.75,
             onTap: null,
           ),
-          const SizedBox(height: 10),
-          const MyButton(
+          SizedBox(height: size.height * 0.03),
+          MyButton(
             buttonText: 'Facebook',
+            butthonWidth: size.width * 0.75,
             onTap: null,
           ),
         ],
