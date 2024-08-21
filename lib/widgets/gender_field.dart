@@ -26,7 +26,7 @@ class _GenderFieldState extends State<GenderField> {
           DropdownMenuItem(value: 'Femme', child: Text('Femme'),),
           // const DropdownMenuItem(child: Text('Autre'), value: 'Autre',),
         ],
-        hint: const Text('Genre'),
+        hint: const Text('Sexe'),
       ),
     );
   }

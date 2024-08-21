@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/auth_screen.dart';
+import './screens/signin_signup.dart';
 
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Auth UI',
-      home: AuthScreen(),
+      home: SigninSignup(),
     );
   }
 }
